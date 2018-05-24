@@ -42,6 +42,9 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
     public void onBindViewHolder(@NonNull CommentAdapter.ViewHolder holder, int position) {
         // TODO wyświetlanie treści komentarza
         // holder.comment.setText(comments.get(position)......);
+        holder.author.setText(comments.get(position).author);
+        holder.comment.setText(comments.get(position).comment);
+        holder.id.setText(Integer.toString(comments.get(position).id));
     }
 
     @Override
@@ -66,11 +69,15 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
     public static class ViewHolder extends RecyclerView.ViewHolder {
         //widgety z comment_list_element.xml
         public TextView comment;
+        public TextView author;
+        public TextView id;
 
         public ViewHolder(View itemView) {
             super(itemView);
             //wyszukanie widgetów
             comment = itemView.findViewById(R.id.comment);
+            author= itemView.findViewById(R.id.author);
+            id = itemView.findViewById(R.id.id);
         }
     }
 }

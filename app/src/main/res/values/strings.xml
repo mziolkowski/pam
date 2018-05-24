@@ -38,4 +38,10 @@
     <string name="nav_header_desc">Nagłówek</string>
     <string name="name">Imię</string>
     <string name="player">Odtwarzacz</string>
+    <string-array name="spinner5">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+    </string-array>
+
 </resources>
